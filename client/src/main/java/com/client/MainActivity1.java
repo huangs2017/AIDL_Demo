@@ -1,6 +1,7 @@
 package com.client;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -9,7 +10,8 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.view.View;
 import android.widget.TextView;
-import com.service.AidlInterface;
+
+import hanson.AidlInterface;
 
 public class MainActivity1 extends AppCompatActivity {
 
@@ -37,7 +39,8 @@ public class MainActivity1 extends AppCompatActivity {
             AidlInterface aidlInterface = AidlInterface.Stub.asInterface(iBinder);
             try {
                 String s = aidlInterface.getString();
-                textView.setText(s);
+                int i = aidlInterface.callAdd(1, 2);
+                textView.setText(s + i);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
