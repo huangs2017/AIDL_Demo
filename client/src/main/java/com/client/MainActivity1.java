@@ -15,7 +15,7 @@ import hanson.AidlInterface;
 
 public class MainActivity1 extends AppCompatActivity {
 
-    private TextView textView = null;
+    private TextView textView;
     Intent intent;
 
     @Override

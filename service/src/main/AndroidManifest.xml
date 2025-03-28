@@ -23,6 +23,15 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name=".RemoteService3"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="com.service3.action"/> <!-- 隐式调用 -->
+            </intent-filter>
+        </service>
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
