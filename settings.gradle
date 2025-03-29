@@ -20,5 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "AIDL_Demo"
-include ':client'
-include ':service'
+include ':Client'
+include ':Service'
